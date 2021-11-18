@@ -110,7 +110,7 @@ for(let i = 0; i < $slider.length; i++){
 // console.dir($slider.length);
 let index = 0;
 //버튼이벤트를 부여해준다
-$btn.addEventListener('click',function() {
+$btn.addEventListener('click',() => {
   if(index < $slider.length) {
     $slider[index].style.opacity = 1 ;
     $slider[index].style.display ="list-item"; // li 태그의 기본 display 속성 defalut 값
@@ -118,6 +118,7 @@ $btn.addEventListener('click',function() {
       //
       $slider[index].previousElementSibling.style.display = "none";
     } 
+   
     index += 1;
   } else {
     $slider[index - 1].style.display = "none";

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>배고파</li>
+    <li>홍대개미</li>
+    <li>라멘</li>
+    <li>국밥</li>
+    <li>갤러리아푸드코트</li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 컨테이너 이벤트 달아주고 event tage 에 접근하기 만 한다면
+ -->
+  <div> 
+    <section>1</section>
+    <section>2</section>
+    <section>3</section>
+    <section>4</section>
+
+
+  </div>
+<script>
+
+  const $container = document.querySelector('div');
+  const $section = document.querySelectorAll('section');
+
+  $container.addEventListener('mouseover',(event)=> {
+   event.target.style.color = "red";
+  });
+  $container.addEventListener('mouseout',(e)=>{
+    e.target.style.color ="";
+    
+  });
+
+//바인딩 binding
+function variableEvent (target){
+  target.addEventListener('click',function(){});
+  target.addEventListener('dblclick',function(){});
+  target.addEventListener('mouseover',function(){});
+  target.addEventListener('mouseout',function(){});
+  target.addEventListener('wheel',function(){});
+}
+
+
+</script>
+
+
+
+</body>
+</html>

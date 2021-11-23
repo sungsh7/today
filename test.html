@@ -108,59 +108,76 @@
         
         <script>
 
-        // //  const $nav = document.querySelector('#nav');
-        //  const $menuOne = document.querySelector('#menu1');     
-        //  const $menuTwo = document.querySelector('#menu2');     
-        //  const $menuThree = document.querySelector('#menu3');     
-        //  const $boxOne = document.querySelector('#box1');
-        //  const $boxTwo = document.querySelector('#box2');
-        //  const $boxThree = document.querySelector('#box3');
 
-        //     $menuOne.addEventListener('mouseover',()=>{
-        //         $boxOne.classList.remove('hidden');
-                
-        //     });
-        //     $menuTwo.addEventListener('mouseover',()=>{
-        //         $boxTwo.classList.remove('hidden');
-        //     });
-        //     $menuThree.addEventListener('mouseover',()=>{
-        //         $boxThree.classList.remove('hidden');
-        //     });
-        //     $menuOne.addEventListener('mouseout',()=>{
-        //         $boxOne.classList.add('hidden');
-        //         $boxOne.style.display = 'block';
-        //     });
-        //     $menuTwo.addEventListener('mouseout',()=>{
-        //         $boxTwo.classList.add('hidden');
-        //         $boxTwo.style.display = 'block';
-        //     });
-        //     $menuThree.addEventListener('mouseout',()=>{
-        //         $boxThree.classList.add('hidden');
-        //         $boxThree.style.display = 'block';
-        //     });
-        //     $menuOne.addEventListener('click',()=>{
-        //         $boxOne.style.display = 'flex';
-        //     });
-        //     $menuTwo.addEventListener('click',()=>{
-        //         $boxTwo.style.display = 'flex';
-        //     });
-        //     $menuThree.addEventListener('click',()=>{
-        //         $boxThree.style.display = 'flex';
-        //     });
+            //메뉴 닷에 마우스를 올리면  숨겨진 메뉴가 나타난다
+            // 클릭하면 세로로 display 되어있던 메뉴가 
+            //가로로 변경된다 
+            //마우스를 치우면  다시 원래대로 숨겨진다
+            //일일이 메뉴에 전부 넣어주기에는 스크립트가 너무길다
+            //줄이고싶은데 방법이 생각이 안난다 .
+            //일단 원하는대로는 변경이 된다
+            // 포문으로 변경이 된다고 하긴 하는데 
+            //정확하게 잘 모르겠다 
+
+        //  const $nav = document.querySelector('#nav');
+         const $menuOne = document.querySelector('#menu1');     
+         const $menuTwo = document.querySelector('#menu2');     
+         const $menuThree = document.querySelector('#menu3');     
+         const $boxOne = document.querySelector('#box1');
+         const $boxTwo = document.querySelector('#box2');
+         const $boxThree = document.querySelector('#box3');
+            //메뉴 전부 선언해준다
+            //각각 이벤트를 넣어서 모션을준다.
+
+            $menuOne.addEventListener('mouseover',()=>{
+                $boxOne.classList.remove('hidden');
+            //마우스를 올리면 hidden 클래스가 지워진다    
+            });
+            $menuTwo.addEventListener('mouseover',()=>{
+                $boxTwo.classList.remove('hidden');
+            });
+            $menuThree.addEventListener('mouseover',()=>{
+                $boxThree.classList.remove('hidden');
+            });
+            $menuOne.addEventListener('mouseout',()=>{
+                $boxOne.classList.add('hidden');
+                $boxOne.style.display = '';
+                //마우스가 메뉴닷을 떠나면 hidden 클래스가 다시 생긴다
+                //클릭했을때 변경됬던 display도 다시 변경된다 
+            });
+            $menuTwo.addEventListener('mouseout',()=>{
+                $boxTwo.classList.add('hidden');
+                $boxTwo.style.display = '';
+            });
+            $menuThree.addEventListener('mouseout',()=>{
+                $boxThree.classList.add('hidden');
+                $boxThree.style.display = '';
+            });
+            $menuOne.addEventListener('click',()=>{
+                $boxOne.style.display = 'flex';
+                //마우스로 닷을 클릭하면 display가 변경되어 가로로 배치된다
+            });
+            $menuTwo.addEventListener('click',()=>{
+                $boxTwo.style.display = 'flex';
+            });
+            $menuThree.addEventListener('click',()=>{
+                $boxThree.style.display = 'flex';
+            });
 
 
 
-           
-            const $nav = document.querySelector('#nav');
-            // console.log($nav);
-            // console.log($con);
-           $nav.addEventListener('click',(e)=>{
-            console.log("innerText의 리턴값 :" + event.target.innerText);
-            console.log("innerHTML의 리턴값 :" + event.target.innerHTML);
-            console.dir(event.target);
-            e.target.children[0].classList.toggle('hidden');
-            e.target.children[0].classList.toggle('flex');
-           });
+            //강사님이 해주신것 
+
+        //     const $nav = document.querySelector('#nav');
+        //     // console.log($nav);
+        //     // console.log($con);
+        //    $nav.addEventListener('click',(e)=>{
+        //     console.log("innerText의 리턴값 :" + event.target.innerText);
+        //     console.log("innerHTML의 리턴값 :" + event.target.innerHTML);
+        //     console.dir(event.target);
+        //     e.target.children[0].classList.toggle('hidden');
+        //     e.target.children[0].classList.toggle('flex');
+        //    });
         </script>
 
 

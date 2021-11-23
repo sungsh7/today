@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box; list-style: none; text-decoration: none;}
+       
+/* 클래스 초기화  */
+        .hidden { display: none;}
+        .flex{display: flex;}
+
+        #contrainer {
+            width: 100vw;
+            height: 100vh;  
+            background-color: blueviolet;
+            display: flex;
+        }
+        #nav { 
+            width: 100vw;
+            height: 10vh;
+            background-color: burlywood;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+     }
+        #menu1 ,#menu2, #menu3{
+            width: 3vw;
+            height: 3vw;
+            border-radius: 100vw;
+            margin-left: 6vw;
+            background-color: black;
+        }
+        #nav  ul {
+            width: 3vw;
+            height: 3vw;
+            
+        }
+        #nav ul  div {
+            margin-top: 3vw;
+        }
+        #nav ul li {
+            width: 5vw;
+            height: 5vh;
+            border: 1px solid blue;
+        }
+        #header {
+            width: 100vw;
+            height: 20vh;
+            background-color: cadetblue;
+        }
+        #main {
+            width: 100vw;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main section {
+            width: 50vw;
+            height: 30vh;
+            background-color: blue;
+        }
+    
+    </style> 
+</head>
+<body>
+    <div id="container">
+        <div id="nav">
+            <ul id="menu1" >
+                <div id="box1" class="hidden">
+                <li>sub-1</li>
+                <li>sub-2</li>
+                <li>sub-3</li>
+                </div>
+            </ul>
+            <ul id="menu2" >
+                    <div id="box2" class="hidden">
+                    <li>sub-1</li>
+                    <li>sub-2</li>
+                    <li>sub-3</li>
+                    </div>
+            </ul>
+            <ul id="menu3" >
+                <div id="box3" class="hidden">
+                    <li>sub-1</li>
+                    <li>sub-2</li>
+                    <li>sub-3</li>
+                    </div>
+            </ul>
+        </div>
+        <div id="header">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                . At labore voluptate error assumenda quaerat nostrum incidunt 
+                nam molestias dolore similique corrupti et expedita ratione, in aut nesciunt, adipisci laboriosam ab.
+            Doloremque, alias atque! Odio esse voluptatibus molestiae corporis 
+            quaerat dolor voluptas reiciendis illo maxime eveniet nulla, perspiciatis facilis impedit dolores, accusantium tempore asperiores earum, nemo modi? Minima error accusantium saepe?
+            Nisi a officia hic placeat voluptatum qui voluptatibus natus
+             itaque excepturi tenetur dolores enim quam, eaque ea incidunt commodi possimus magni quidem. Consectetur, blanditiis suscipit deleniti consequuntur quas dicta enim!
+            Hic quidem repudiandae modi iste consequatur tenetur. Dignissimos, 
+            iste? Omnis recusandae, eos optio inventore cum, aspernatur, cumque vitae magni laborum fugiat nam incidunt dolore quod tempora earum! Ad, voluptates soluta!</span>
+        </div>
+        <div id="main">
+            <section></section>
+        </div>
+        
+        <script>
+
+        // //  const $nav = document.querySelector('#nav');
+        //  const $menuOne = document.querySelector('#menu1');     
+        //  const $menuTwo = document.querySelector('#menu2');     
+        //  const $menuThree = document.querySelector('#menu3');     
+        //  const $boxOne = document.querySelector('#box1');
+        //  const $boxTwo = document.querySelector('#box2');
+        //  const $boxThree = document.querySelector('#box3');
+
+        //     $menuOne.addEventListener('mouseover',()=>{
+        //         $boxOne.classList.remove('hidden');
+                
+        //     });
+        //     $menuTwo.addEventListener('mouseover',()=>{
+        //         $boxTwo.classList.remove('hidden');
+        //     });
+        //     $menuThree.addEventListener('mouseover',()=>{
+        //         $boxThree.classList.remove('hidden');
+        //     });
+        //     $menuOne.addEventListener('mouseout',()=>{
+        //         $boxOne.classList.add('hidden');
+        //         $boxOne.style.display = 'block';
+        //     });
+        //     $menuTwo.addEventListener('mouseout',()=>{
+        //         $boxTwo.classList.add('hidden');
+        //         $boxTwo.style.display = 'block';
+        //     });
+        //     $menuThree.addEventListener('mouseout',()=>{
+        //         $boxThree.classList.add('hidden');
+        //         $boxThree.style.display = 'block';
+        //     });
+        //     $menuOne.addEventListener('click',()=>{
+        //         $boxOne.style.display = 'flex';
+        //     });
+        //     $menuTwo.addEventListener('click',()=>{
+        //         $boxTwo.style.display = 'flex';
+        //     });
+        //     $menuThree.addEventListener('click',()=>{
+        //         $boxThree.style.display = 'flex';
+        //     });
+
+
+
+           
+            const $nav = document.querySelector('#nav');
+            // console.log($nav);
+            // console.log($con);
+           $nav.addEventListener('click',(e)=>{
+            console.log("innerText의 리턴값 :" + event.target.innerText);
+            console.log("innerHTML의 리턴값 :" + event.target.innerHTML);
+            console.dir(event.target);
+            e.target.children[0].classList.toggle('hidden');
+            e.target.children[0].classList.toggle('flex');
+           });
+        </script>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>

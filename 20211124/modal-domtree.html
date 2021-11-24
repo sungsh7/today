@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;list-style: none;text-decoration: none;}
+
+
+        #container section {
+            width: 100vw;
+            height: 100vh;
+        }
+        #container section:nth-child(1){
+            background-color: coral;
+        }
+        #container section:nth-child(2){
+            background-color: cornflowerblue;
+        }
+        #container section:nth-child(3){
+            background-color: gainsboro;
+        }
+
+        #nav {
+            width: 100vw;
+            height: 5vh;
+            background-color: goldenrod;
+            position: sticky;
+            z-index: 1;
+            top: 0;
+        }
+
+    </style>
+
+<body>
+    <nav id="nav"></nav>
+    <div id="container">
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+
+    <script>
+        const $nav = document.querySelector('#nav');
+        // console.log($nav);
+       //윈도우가 스크롤 되면 nav 색이 변한다
+       //스크롤 단위를 정할수 있을까
+       //if 문으로 정리해본다
+
+      window.addEventListener('scroll',()=>{
+        let valueScrollY = window.scrollY
+        
+        if (valueScrollY <= 0 ){
+        $nav.style.backgroundColor = ' goldenrod';
+         }
+        if(valueScrollY >= 600 ) { 
+            $nav.style.backgroundColor = 'red';
+        }if(valueScrollY >= 1000 ){
+            $nav.style.backgroundColor = 'blue';
+        }if (valueScrollY >= 1500 ){
+            $nav.style.backgroundColor = ' green';
+        }
+        // console.log(typeof valueScrollY);
+        
+        console.log(valueScrollY);
+       
+      });
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    *{padding: 0; margin: 0; box-sizing: border-box;}
+    ul,li{
+      list-style: none;
+    }
+
+    .hidden{height: 0;}
+    .hei100{height: 100px;}
+    .dis-no{display: none;}
+    .dis-bl{display: block;}
+
+    #popup{
+      position: absolute;
+      left: 50%;
+      top: 20%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 50%;
+      background-color: violet;
+    }
+
+    #popup button{
+      padding: 5px;
+      position: absolute;
+      bottom: 0;
+      right: 50px;
+    }
+
+    #wrap{
+      width: 1000px;
+      height: 650px;
+      margin: 0 auto;
+    }
+
+    header{
+      width: 200px;
+      height: 650px;
+      background-color: antiquewhite;
+      float: left;
+    }
+
+    #logo{
+      width: 200px;
+      height: 100px;
+      background-color: black;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    #logo a{
+      width: 100%;
+      height: 40px;
+      background-color: fuchsia;
+    }
+
+    #gnb{
+      width: 160px;
+      height: auto;
+      margin: 0 auto;
+      background-color: blueviolet;
+      text-align: center;
+      cursor: pointer;
+    }
+    #gnb>li{
+      width: 100%;
+      height: 25%;
+      line-height: 50px;
+    }
+
+    #sub{
+      /* height: 100px; */
+      background-color: palegreen;
+      transition: 200ms;
+    }
+
+    #sub>li{
+      height: 25px;
+      line-height: 25px;
+    }
+
+    section{
+      width: 800px;
+      height: 650px;
+      background-color: aqua;
+      float: right;
+    }
+
+    #slide{
+      width: 800px;
+      height: 350px;
+      background-color: burlywood;
+    }
+
+    #mid{
+      width: 800px;
+      height: 200px;
+      background-color: cyan;
+      display: flex;
+    }
+
+    #mid>div{
+      width: 33.3333333333%;
+      height: 100%;
+    }
+
+    #mid>div:nth-child(1) {background-color: khaki;} 
+    #mid>div:nth-child(2) {background-color: darkslategray;}
+    #mid>div:nth-child(3) {background-color: darkturquoise;}
+
+    button{
+      width: 50%;
+      padding: 6px;
+      border: none
+    }
+
+    .box{
+      width: 266.6666px;
+      height: 170px;
+      background-color: aquamarine;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box2{
+      width: 266.6666px;
+      height: 170px;
+      background-color: aquamarine;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .box2 div{
+      width: 32%;
+      height: 60%;
+      background-color: oldlace;
+    }
+
+    #notice p{
+      text-decoration: underline;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+
+
+    footer{
+      width: 800px;
+      height: 100px;
+      background-color: darkgray;
+    }
+
+    #copy{
+      width: 600px;
+      height: 100px;
+      background-color: darkorange;
+      float: left;
+    }
+
+    #sns{
+      width: 200px;
+      height: 50px;
+      background-color: darkslategray;
+      float: right;
+    }
+
+    #famliy{
+      width: 200px;
+      height: 50px;
+      background-color: forestgreen;
+      float: right;
+    }
+  </style>
+
+  <link rel="stylesheet" href="./c2.css">
+  <script src="/c2.js"></script>
+</head>
+<body>
+  
+  <div id="wrap">
+
+    <div id="popup" class="dis-no">
+      <button id="close">닫기</button>
+    </div>
+
+    <header>
+
+      <div id="logo">
+        <a href="#"><img src="" alt=""></a>
+      </div>
+
+      <ul id="gnb">
+        <li>menu1
+          <ul id="sub" class="hidden">
+            <li class="dis-no">submenu1</li>
+            <li class="dis-no">submenu2</li>
+            <li class="dis-no">submenu3</li>
+            <li class="dis-no">submenu4</li>
+          </ul>
+        </li>
+        <li>menu2
+          <ul id="sub" class="hidden">
+            <li class="dis-no">submenu1</li>
+            <li class="dis-no">submenu2</li>
+            <li class="dis-no">submenu3</li>
+            <li class="dis-no">submenu4</li>
+          </ul>
+        </li>
+        <li>menu3
+          <ul id="sub" class="hidden">
+            <li class="dis-no">submenu1</li>
+            <li class="dis-no">submenu2</li>
+            <li class="dis-no">submenu3</li>
+            <li class="dis-no">submenu4</li>
+          </ul>
+        </li>
+        <li>menu4
+          <ul id="sub" class="hidden">
+            <li class="dis-no">submenu1</li>
+            <li class="dis-no">submenu2</li>
+            <li class="dis-no">submenu3</li>
+            <li class="dis-no">submenu4</li>
+          </ul>
+        </li>
+      </ul1gnb>
+
+    </header>
+
+    <section>
+
+      <div id="slide">
+
+      </div>
+      
+      <div id="mid">
+        <div id="notice">
+          <button>공지사항</button>
+
+          <div class="box">
+            <p id="poptxt">공지사항공지사항공지사항</p>
+            <p>공지사항공지사항공지사항</p>
+            <p>공지사항공지사항공지사항</p>
+            <p>공지사항공지사항공지사항</p>
+            <p>공지사항공지사항공지사항</p>
+          </div>
+
+        </div>
+
+        <div id="gall">
+        <button>갤러리</button>
+
+          <div class="box2">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+        </div>
+        <div></div>
+      </div>
+
+      <footer>
+
+        <div id="copy"></div>
+        <div id="sns"></div>
+        <div id="famliy"></div>
+
+      </footer>
+
+    </section>
+
+  </div>
+
+  <script>
+
+    const $gnb = document.querySelectorAll('#gnb>li');
+    const $sub = document.querySelectorAll('#sub');
+    const $subLi = document.querySelectorAll('#sub>li');
+    const $popTxt = document.querySelector('#poptxt');
+    const $popUp = document.querySelector('#popup');
+    const $close = document.querySelector('#close');
+
+    console.log($gnb);
+    console.log($sub);
+    console.log($subLi);
+
+    $popTxt.addEventListener('click', () => {
+      $popUp.classList.remove('dis-no')
+    })
+
+    $close.addEventListener('click', () => {
+      $popUp.classList.add('dis-no');
+    })
+
+
+    for (let i = 0; i < $gnb.length; i++) {
+      $gnb[i].addEventListener('mouseover', () => {
+        $sub[i].classList.replace('hidden', 'hei100');
+          for (let j = 0; j <$sub.length; j++) {
+          $sub[i].children[j].classList.replace('dis-no','dis-bl');
+        }  
+      })
+
+      $gnb[i].addEventListener('mouseout', () => {
+        $sub[i].classList.replace('hei100','hidden');
+        for (let j = 0; j <$subLi.length; j++) {
+          $sub[i].children[j].classList.replace('dis-bl','dis-no');
+        }       
+      })
+
+    }
+
+
+    // for (let i=0; i < $gnb.length; i++) {
+    //   $gnb[i].addEventListener('mouseover', () => {
+    //     $sub[i].classList.toggle('hidden');
+    //     for(let j=0; j<$subLi.length; j++) {
+    //       $sub[i].children[j].classList.toggle('dis-no');
+    //     }
+    //   })
+    // }
+
+  </script>
+
+</body>
+</html>
